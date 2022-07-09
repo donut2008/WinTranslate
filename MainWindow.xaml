@@ -19,6 +19,7 @@
 				<x:String>Assamese</x:String>
 				<x:String>Ayhara</x:String>
 				<x:String>Azerbaijani</x:String>
+				<x:String>Bambara</x:String>
 			</ComboBox>
 			<TextBox PlaceholderText="Enter text to translate"></TextBox>
 		</StackPanel>
