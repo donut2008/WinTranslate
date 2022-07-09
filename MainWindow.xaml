@@ -20,6 +20,17 @@
 				<x:String>Ayhara</x:String>
 				<x:String>Azerbaijani</x:String>
 				<x:String>Bambara</x:String>
+				<x:String>Basque</x:String>
+				<x:String>Belarusian</x:String>
+				<x:String>Bengali</x:String>
+				<x:String>Bhojpuri</x:String>
+				<x:String>Bosnian</x:String>
+				<x:String>Bulgarian</x:String>
+				<x:String>Catalan</x:String>
+				<x:String>Cebuano</x:String>
+				<x:String>Chichewa</x:String>
+				<x:String>Chinese</x:String>
+				<x:String>Corsican</x:String>
 			</ComboBox>
 			<TextBox PlaceholderText="Enter text to translate"></TextBox>
 		</StackPanel>
