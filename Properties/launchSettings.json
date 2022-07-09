@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WinTranslate (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "WinTranslate (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
