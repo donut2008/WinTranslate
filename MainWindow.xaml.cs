@@ -12,6 +12,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Web.Http;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -23,19 +24,32 @@ namespace WinTranslate
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        public String TranslationText, TranslatedText, TranslationURL;
+        public int LangToTranslate;
+        HttpClient httpClient = new HttpClient();
         public MainWindow()
         {
             this.InitializeComponent();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void resultLang_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
-        private void toTranslate_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void translatedText_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
         {
 
+        }
+
+        private void sourceLang_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            LangToTranslate = sourceLang.SelectedIndex;
+        }
+
+        private void textToTranslate_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            TranslationText = sourceText.Text;
         }
     }
 }

@@ -7,32 +7,284 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 	<Grid>
-		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-			<TextBlock Style="{StaticResource HeaderTextBlockStyle}">Translate</TextBlock>
-			<ComboBox x:Name="toTranslate" SelectedIndex="0" SelectionChanged="toTranslate_SelectionChanged">
-				<x:String>Auto detect</x:String>
-				<x:String>Afrikaans</x:String>
-				<x:String>Albanian</x:String>
-				<x:String>Amharic</x:String>
-				<x:String>Arabic</x:String>
-				<x:String>Armenian</x:String>
-				<x:String>Assamese</x:String>
-				<x:String>Ayhara</x:String>
-				<x:String>Azerbaijani</x:String>
-				<x:String>Bambara</x:String>
-				<x:String>Basque</x:String>
-				<x:String>Belarusian</x:String>
-				<x:String>Bengali</x:String>
-				<x:String>Bhojpuri</x:String>
-				<x:String>Bosnian</x:String>
-				<x:String>Bulgarian</x:String>
-				<x:String>Catalan</x:String>
-				<x:String>Cebuano</x:String>
-				<x:String>Chichewa</x:String>
-				<x:String>Chinese</x:String>
-				<x:String>Corsican</x:String>
-			</ComboBox>
-			<TextBox PlaceholderText="Enter text to translate"></TextBox>
+		<StackPanel Orientation="Horizontal" Spacing="5">
+			<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<TextBlock Style="{StaticResource HeaderTextBlockStyle}">Translate</TextBlock>
+				<ComboBox x:Name="sourceLang" SelectedIndex="0" SelectionChanged="sourceLang_SelectionChanged">
+					<x:String>Auto detect</x:String>
+					<x:String>Afrikaans</x:String>
+					<x:String>Albanian</x:String>
+					<x:String>Amharic</x:String>
+					<x:String>Arabic</x:String>
+					<x:String>Armenian</x:String>
+					<x:String>Assamese</x:String>
+					<x:String>Ayhara</x:String>
+					<x:String>Azerbaijani</x:String>
+					<x:String>Bambara</x:String>
+					<x:String>Basque</x:String>
+					<x:String>Belarusian</x:String>
+					<x:String>Bengali</x:String>
+					<x:String>Bhojpuri</x:String>
+					<x:String>Bosnian</x:String>
+					<x:String>Bulgarian</x:String>
+					<x:String>Catalan</x:String>
+					<x:String>Cebuano</x:String>
+					<x:String>Chichewa</x:String>
+					<x:String>Chinese</x:String>
+					<x:String>Corsican</x:String>
+					<x:String>Croatian</x:String>
+					<x:String>Czech</x:String>
+					<x:String>Danish</x:String>
+					<x:String>Dhivehi</x:String>
+					<x:String>Dogri</x:String>
+					<x:String>Dutch</x:String>
+					<x:String>English</x:String>
+					<x:String>Esperanto</x:String>
+					<x:String>Estonian</x:String>
+					<x:String>Ewe</x:String>
+					<x:String>Filipino</x:String>
+					<x:String>Finnish</x:String>
+					<x:String>French</x:String>
+					<x:String>Frisian</x:String>
+					<x:String>Galician</x:String>
+					<x:String>Georgian</x:String>
+					<x:String>German</x:String>
+					<x:String>Greek</x:String>
+					<x:String>Guarani</x:String>
+					<x:String>Gujarati</x:String>
+					<x:String>Haitian Creole</x:String>
+					<x:String>Hausa</x:String>
+					<x:String>Hawaiian</x:String>
+					<x:String>Hebrew</x:String>
+					<x:String>Hindi</x:String>
+					<x:String>Hmong</x:String>
+					<x:String>Hungarian</x:String>
+					<x:String>Icelandic</x:String>
+					<x:String>Igbo</x:String>
+					<x:String>Ilocano</x:String>
+					<x:String>Indonesian</x:String>
+					<x:String>Irish</x:String>
+					<x:String>Italian</x:String>
+					<x:String>Japanese</x:String>
+					<x:String>Javanese</x:String>
+					<x:String>Kannada</x:String>
+					<x:String>Kazakh</x:String>
+					<x:String>Khmer</x:String>
+					<x:String>Kinyarwanda</x:String>
+					<x:String>Konkani</x:String>
+					<x:String>Korean</x:String>
+					<x:String>Krio</x:String>
+					<x:String>Kurdish (Kurmanji)</x:String>
+					<x:String>Kurdish (Sorani)</x:String>
+					<x:String>Kyrgyz</x:String>
+					<x:String>Lao</x:String>
+					<x:String>Latin</x:String>
+					<x:String>Latvian</x:String>
+					<x:String>Lingala</x:String>
+					<x:String>Lithuanian</x:String>
+					<x:String>Luganda</x:String>
+					<x:String>Luxembourgish</x:String>
+					<x:String>Macedonian</x:String>
+					<x:String>Maithili</x:String>
+					<x:String>Malagasy</x:String>
+					<x:String>Malay</x:String>
+					<x:String>Malayalam</x:String>
+					<x:String>Maltese</x:String>
+					<x:String>Maori</x:String>
+					<x:String>Marathi</x:String>
+					<x:String>Meiteilon (Manipuri)</x:String>
+					<x:String>Mizo</x:String>
+					<x:String>Mongolian</x:String>
+					<x:String>Myanmar (Burmese)</x:String>
+					<x:String>Nepali</x:String>
+					<x:String>Norwegian</x:String>
+					<x:String>Odia (Oriya)</x:String>
+					<x:String>Oromo</x:String>
+					<x:String>Pashto</x:String>
+					<x:String>Persian</x:String>
+					<x:String>Polish</x:String>
+					<x:String>Portuguese</x:String>
+					<x:String>Punjabi</x:String>
+					<x:String>Quechua</x:String>
+					<x:String>Romanian</x:String>
+					<x:String>Russian</x:String>
+					<x:String>Samoan</x:String>
+					<x:String>Sanskrit</x:String>
+					<x:String>Scots Gaelic</x:String>
+					<x:String>Sepedi</x:String>
+					<x:String>Serbian</x:String>
+					<x:String>Sesotho</x:String>
+					<x:String>Shona</x:String>
+					<x:String>Sindhi</x:String>
+					<x:String>Sinhala</x:String>
+					<x:String>Slovak</x:String>
+					<x:String>Slovenian</x:String>
+					<x:String>Somali</x:String>
+					<x:String>Spanish</x:String>
+					<x:String>Sundanese</x:String>
+					<x:String>Swahili</x:String>
+					<x:String>Swedish</x:String>
+					<x:String>Tajik</x:String>
+					<x:String>Tamil</x:String>
+					<x:String>Tatar</x:String>
+					<x:String>Telugu</x:String>
+					<x:String>Thai</x:String>
+					<x:String>Tigrinya</x:String>
+					<x:String>Tsonga</x:String>
+					<x:String>Turkish</x:String>
+					<x:String>Turkmen</x:String>
+					<x:String>Twi</x:String>
+					<x:String>Ukrainian</x:String>
+					<x:String>Urdu</x:String>
+					<x:String>Uyghur</x:String>
+					<x:String>Uzbek</x:String>
+					<x:String>Vietnamese</x:String>
+					<x:String>Welsh</x:String>
+					<x:String>Xhosa</x:String>
+					<x:String>Yiddish</x:String>
+					<x:String>Yoruba</x:String>
+					<x:String>Zulu</x:String>
+				</ComboBox>
+				<TextBox x:Name="sourceText" PlaceholderText="Enter text to translate" TextChanging="textToTranslate_TextChanging"/>
+			</StackPanel>
+			<StackPanel Orientation="Vertical" Spacing="5">
+				<ComboBox x:Name="resultLang" SelectedIndex="0" SelectionChanged="resultLang_SelectionChanged">
+					<x:String>Auto detect</x:String>
+					<x:String>Afrikaans</x:String>
+					<x:String>Albanian</x:String>
+					<x:String>Amharic</x:String>
+					<x:String>Arabic</x:String>
+					<x:String>Armenian</x:String>
+					<x:String>Assamese</x:String>
+					<x:String>Ayhara</x:String>
+					<x:String>Azerbaijani</x:String>
+					<x:String>Bambara</x:String>
+					<x:String>Basque</x:String>
+					<x:String>Belarusian</x:String>
+					<x:String>Bengali</x:String>
+					<x:String>Bhojpuri</x:String>
+					<x:String>Bosnian</x:String>
+					<x:String>Bulgarian</x:String>
+					<x:String>Catalan</x:String>
+					<x:String>Cebuano</x:String>
+					<x:String>Chichewa</x:String>
+					<x:String>Chinese</x:String>
+					<x:String>Corsican</x:String>
+					<x:String>Croatian</x:String>
+					<x:String>Czech</x:String>
+					<x:String>Danish</x:String>
+					<x:String>Dhivehi</x:String>
+					<x:String>Dogri</x:String>
+					<x:String>Dutch</x:String>
+					<x:String>English</x:String>
+					<x:String>Esperanto</x:String>
+					<x:String>Estonian</x:String>
+					<x:String>Ewe</x:String>
+					<x:String>Filipino</x:String>
+					<x:String>Finnish</x:String>
+					<x:String>French</x:String>
+					<x:String>Frisian</x:String>
+					<x:String>Galician</x:String>
+					<x:String>Georgian</x:String>
+					<x:String>German</x:String>
+					<x:String>Greek</x:String>
+					<x:String>Guarani</x:String>
+					<x:String>Gujarati</x:String>
+					<x:String>Haitian Creole</x:String>
+					<x:String>Hausa</x:String>
+					<x:String>Hawaiian</x:String>
+					<x:String>Hebrew</x:String>
+					<x:String>Hindi</x:String>
+					<x:String>Hmong</x:String>
+					<x:String>Hungarian</x:String>
+					<x:String>Icelandic</x:String>
+					<x:String>Igbo</x:String>
+					<x:String>Ilocano</x:String>
+					<x:String>Indonesian</x:String>
+					<x:String>Irish</x:String>
+					<x:String>Italian</x:String>
+					<x:String>Japanese</x:String>
+					<x:String>Javanese</x:String>
+					<x:String>Kannada</x:String>
+					<x:String>Kazakh</x:String>
+					<x:String>Khmer</x:String>
+					<x:String>Kinyarwanda</x:String>
+					<x:String>Konkani</x:String>
+					<x:String>Korean</x:String>
+					<x:String>Krio</x:String>
+					<x:String>Kurdish (Kurmanji)</x:String>
+					<x:String>Kurdish (Sorani)</x:String>
+					<x:String>Kyrgyz</x:String>
+					<x:String>Lao</x:String>
+					<x:String>Latin</x:String>
+					<x:String>Latvian</x:String>
+					<x:String>Lingala</x:String>
+					<x:String>Lithuanian</x:String>
+					<x:String>Luganda</x:String>
+					<x:String>Luxembourgish</x:String>
+					<x:String>Macedonian</x:String>
+					<x:String>Maithili</x:String>
+					<x:String>Malagasy</x:String>
+					<x:String>Malay</x:String>
+					<x:String>Malayalam</x:String>
+					<x:String>Maltese</x:String>
+					<x:String>Maori</x:String>
+					<x:String>Marathi</x:String>
+					<x:String>Meiteilon (Manipuri)</x:String>
+					<x:String>Mizo</x:String>
+					<x:String>Mongolian</x:String>
+					<x:String>Myanmar (Burmese)</x:String>
+					<x:String>Nepali</x:String>
+					<x:String>Norwegian</x:String>
+					<x:String>Odia (Oriya)</x:String>
+					<x:String>Oromo</x:String>
+					<x:String>Pashto</x:String>
+					<x:String>Persian</x:String>
+					<x:String>Polish</x:String>
+					<x:String>Portuguese</x:String>
+					<x:String>Punjabi</x:String>
+					<x:String>Quechua</x:String>
+					<x:String>Romanian</x:String>
+					<x:String>Russian</x:String>
+					<x:String>Samoan</x:String>
+					<x:String>Sanskrit</x:String>
+					<x:String>Scots Gaelic</x:String>
+					<x:String>Sepedi</x:String>
+					<x:String>Serbian</x:String>
+					<x:String>Sesotho</x:String>
+					<x:String>Shona</x:String>
+					<x:String>Sindhi</x:String>
+					<x:String>Sinhala</x:String>
+					<x:String>Slovak</x:String>
+					<x:String>Slovenian</x:String>
+					<x:String>Somali</x:String>
+					<x:String>Spanish</x:String>
+					<x:String>Sundanese</x:String>
+					<x:String>Swahili</x:String>
+					<x:String>Swedish</x:String>
+					<x:String>Tajik</x:String>
+					<x:String>Tamil</x:String>
+					<x:String>Tatar</x:String>
+					<x:String>Telugu</x:String>
+					<x:String>Thai</x:String>
+					<x:String>Tigrinya</x:String>
+					<x:String>Tsonga</x:String>
+					<x:String>Turkish</x:String>
+					<x:String>Turkmen</x:String>
+					<x:String>Twi</x:String>
+					<x:String>Ukrainian</x:String>
+					<x:String>Urdu</x:String>
+					<x:String>Uyghur</x:String>
+					<x:String>Uzbek</x:String>
+					<x:String>Vietnamese</x:String>
+					<x:String>Welsh</x:String>
+					<x:String>Xhosa</x:String>
+					<x:String>Yiddish</x:String>
+					<x:String>Yoruba</x:String>
+					<x:String>Zulu</x:String>
+				</ComboBox>
+				<TextBox x:Name="translatedText" PlaceholderText="Waiting for input" TextChanging="translatedText_TextChanging"/>
+			</StackPanel>
 		</StackPanel>
 	</Grid>
 </Window>
